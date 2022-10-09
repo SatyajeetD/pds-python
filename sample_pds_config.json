@@ -1,0 +1,26 @@
+Version=3
+Loglevel=INFO
+{
+    "Cluster1": [
+        {
+            "chassis": "", 
+            "controller_ips": [], 
+            "ip_nqn_map": {}
+        }
+    ], 
+    "Cluster2": [
+        {
+            "chassis": "", 
+            "controller_ips": [], 
+            "ip_nqn_map": {}
+        }
+    ],
+    "Constants": {
+        "connection_port": 4420, 
+        "module_check": 0, 
+        "num_queues": 4, 
+        "protocol": "rdma",
+        "io_timeout": 600
+    }
+
+}
