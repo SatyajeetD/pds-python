@@ -1,0 +1,9 @@
+#!/bin/sh
+cp /etc/pds/sample_pds.conf /etc/pds/pds.conf
+systemctl enable pds.service
+crontab -l > file; echo '*/5 * * * * /usr/bin/pds_nvmeof_tmr.sh | systemd-cat' >> file; crontab file
+echo "--------------------------------"
+echo "Please update the pds.conf file in /etc/pds as per the chassis setup configuration."
+echo "--------------------------------"
+echo "run command 'systemctl start pds.service' to start the service after editing pds.conf"
+echo "--------------------------------"

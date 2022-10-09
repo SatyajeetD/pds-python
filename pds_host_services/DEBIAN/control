@@ -1,0 +1,6 @@
+Package: PDS-NVMeoF-SERVICE
+Version: 1.9.
+Architecture: amd64
+Maintainer: Pavilion Data Systems Inc. <https://pavilion.io>
+Description: Pavilion Host Init Service
+ Initialization service which ensures NVMeoF volumes are connected at all times.

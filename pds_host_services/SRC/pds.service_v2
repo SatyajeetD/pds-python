@@ -1,0 +1,23 @@
+# This is /usr/lib/systemd/system/pds.service
+# (or /lib/systemd/system/pds_nvmeof.service dependent on
+# your linux distribution flavor )
+[Unit]
+Description=PDS NVMEoF Initialization Service
+Before=
+After=network.service syslog.target
+
+[Service]
+# see man systemd.service
+Type=oneshot
+ExecStart=/bin/bash /usr/bin/pds_initialize.sh
+PIDFile=/var/pds/pid/master.pid
+RemainAfterExit=true
+#ExecStopPre=/usr/bin/bash /usr/bin/pds_deinitialize.sh
+ExecStop=/bin/bash /usr/bin/pds_deinitialize.sh
+ExecStopPost=/bin/bash /usr/bin/pds_deinitialize.sh
+StandardOutput=journal
+StandardError=journal
+TimeoutStopSec=9000
+
+[Install]
+WantedBy=multi-user.target local-fs.target rc-local.service

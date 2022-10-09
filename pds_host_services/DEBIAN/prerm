@@ -1,0 +1,5 @@
+#!/bin/sh
+crontab -l | grep -v '/usr/bin/pds_nvmeof_tmr.sh' | crontab -
+rm -f /etc/pds/pds.conf
+systemctl disable pds.service
+systemctl stop pds.service

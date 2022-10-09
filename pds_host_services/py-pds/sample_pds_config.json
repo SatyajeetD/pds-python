@@ -1,0 +1,21 @@
+Version=3
+Loglevel=INFO
+{
+    "Cluster1": [
+        {
+            "chassis": "", 
+            "controller_ips": [
+                "192.168.10.10",
+		"192.168.10.13" 
+            ], 
+            "ip_nqn_map": {}
+        }
+    ], 
+    "Cluster2": [
+        {
+            "chassis": "", 
+            "controller_ips": ["192.168.11.10"], 
+            "ip_nqn_map": {}
+        }
+    ]
+}
