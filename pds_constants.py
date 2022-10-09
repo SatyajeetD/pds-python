@@ -1,0 +1,9 @@
+pds_config_file='/etc/pds/pds.conf'
+#protocol='rdma'
+#num_queues='1'
+#connection_port='4420'
+pds_base_path='/etc/pds/'
+pds_log_file='/etc/pds/pds_nvmeof_nqn_list.log'
+pds_temp_log_file='/etc/pds/pds_nvme_nqn_temp.log'
+#module_check=1
+default_nvme_path='/sys/devices/virtual/nvme-fabrics/ctl/'
